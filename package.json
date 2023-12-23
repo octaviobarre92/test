@@ -1,7 +1,6 @@
 {
   "name": "test",
   "version": "0.1.0",
-  "homepage": "/login",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -13,6 +12,7 @@
     "metismenujs": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-loading-overlay": "^1.0.1",
     "react-redux": "^9.0.2",
     "react-router-dom": "^6.0.2",
     "react-router-redux": "next",
