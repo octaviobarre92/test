@@ -10,6 +10,7 @@ function* productos() {
 export default productos
 
 function* getLastProduct() {
+    console.log("aquiiii");
     yield new Promise(resolve => setTimeout(resolve, 2000));
     const response = yield call(servicios.getLastProduct);
     let dataProducts = [];

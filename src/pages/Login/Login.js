@@ -21,7 +21,7 @@ const Login = ({ goDashboard, fetching }) => {
     });
     const handleSubmit = (values) => {
         localStorage.setItem("userInfo", values)
-        goDashboard(values, navigate)
+        goDashboard(values, navigate("/dashboard"))
     }
 
     return (
@@ -76,6 +76,7 @@ const mapDispatchToProps = (dispatch) => ({
     goDashboard: (values, navigate) => {
         const { email, password } = values
         dispatch(actionLogin.login(email, password, navigate));
+        navigate()
     },
     resetLogin: () => {
         actionLogin.resetLogin();

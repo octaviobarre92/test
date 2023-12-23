@@ -22,7 +22,7 @@ function* loginAuth({ user, password,navigate }) {
             fechaNacimiento: "1990-01-25",
         }
     })
-    yield put(navigate("/dashboard"))
+    // yield put(navigate)
 }
 
 

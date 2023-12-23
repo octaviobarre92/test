@@ -46,7 +46,7 @@ const Header = () => {
                     </div>
 
                     <div class="d-flex align-items-center">
-                        <Button className="btn-danger" >Salir</Button>
+                        <Button className="btn-danger" onClick={() => { changeLink("login") }}>Salir</Button>
                     </div>
                 </div>
             </nav>

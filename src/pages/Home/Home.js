@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 // import RevenueChart from "./revenue-chart"
 import 'bootstrap/dist/css/bootstrap.css'
 import Layout from "../../components/Layout";
@@ -6,8 +6,13 @@ import { Button, Card, CardImg, CardImgOverlay, CardText, CardTitle, Col, Row } 
 import './home.css'
 import LastProduct from "../Productos/LastProduct";
 import Header from "../../components/Header";
+import { connect } from "react-redux";
+import { actions as actionProducts, selectors as selectorProducts } from "../../store/reducers/products"
 
-const Home = ({ }) => {
+const Home = ({ getLastProducts=()=>{} }) => {
+    useEffect(() => {
+        getLastProducts()
+    }, [])
     return (
         <>
             {<Header />}
@@ -36,7 +41,7 @@ const Home = ({ }) => {
                             <CardTitle tag="h5">
                                 Ultimos productos registrado
                             </CardTitle>
-                            <LastProduct  showAdd={false} />
+                            <LastProduct showAdd={false} />
 
                         </Card>
                     </Col>
@@ -46,4 +51,9 @@ const Home = ({ }) => {
     )
 }
 
-export default Home
+const mapDispatchToProps = (dispatch) => ({
+    getLastProducts: () => {
+        dispatch(actionProducts.getLastProduct());
+    }
+});
+export default connect(null, mapDispatchToProps)(Home)

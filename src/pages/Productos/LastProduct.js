@@ -140,6 +140,7 @@ const mapStateToProps = (state) => ({
 })
 const mapDispatchToProps = (dispatch) => ({
     getLastProducts: () => {
+        console.log("acaaa");
         dispatch(actionProducts.getLastProduct());
     }
 });
