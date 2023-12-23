@@ -32,7 +32,36 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.theme-input-error {
+  color: rgb(252, 120, 120);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+
+.footer {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: white;
+  margin-bottom: 5rem;
 }

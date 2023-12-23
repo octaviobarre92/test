@@ -1,0 +1,8 @@
+.compras-nuevoProveedor__seccion_button {
+    display: flex;
+    justify-content: center;
+}
+
+.compras-nuevoProveedor__agregar {
+    width: 15rem;
+}

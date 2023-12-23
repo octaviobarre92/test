@@ -1,0 +1,13 @@
+.layout-content {
+    background-color: rgb(190, 190, 190);
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+
+}
+._loading_overlay_wrapper{
+    max-width: 100% !important;
+    max-height: 100% !important;
+    overflow: scroll !important;
+}
