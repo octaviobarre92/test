@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { Button } from "reactstrap"
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
 import './login.css'
 import InputField from "../../components/InputField";
-import { push } from "react-router-redux";
 import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import LayoutLoader from "../../components/LayoutLoader";
@@ -83,4 +82,3 @@ const mapDispatchToProps = (dispatch) => ({
     }
 });
 export default connect(mapStateToProps, mapDispatchToProps)(Login)
-// export default Login

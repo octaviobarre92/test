@@ -1,15 +1,13 @@
 import React, { useEffect } from "react"
-// import RevenueChart from "./revenue-chart"
 import 'bootstrap/dist/css/bootstrap.css'
 import Layout from "../../components/Layout";
-import { Button, Card, CardImg, CardImgOverlay, CardText, CardTitle, Col, Row } from "reactstrap";
-import './home.css'
+import { Card, CardImg, CardImgOverlay, CardText, CardTitle, Col, Row } from "reactstrap";
 import LastProduct from "../Productos/LastProduct";
 import Header from "../../components/Header";
 import { connect } from "react-redux";
-import { actions as actionProducts, selectors as selectorProducts } from "../../store/reducers/products"
+import { actions as actionProducts } from "../../store/reducers/products"
 
-const Home = ({ getLastProducts=()=>{} }) => {
+const Home = ({ getLastProducts = () => { } }) => {
     useEffect(() => {
         getLastProducts()
     }, [])

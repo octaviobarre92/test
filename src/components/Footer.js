@@ -1,5 +1,4 @@
 import React from "react"
-// import RevenueChart from "./revenue-chart"
 import 'bootstrap/dist/css/bootstrap.css'
 const Footer = () => {
     return (

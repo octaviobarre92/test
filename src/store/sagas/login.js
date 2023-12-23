@@ -1,8 +1,6 @@
-import { takeEvery, takeLatest, take, call, fork, put } from "redux-saga/effects";
-// import * as servicios from "../middleware/login"
-// import * as api from "../api/altaUnica";
+import { put, takeLatest } from "redux-saga/effects";
+
 import { types } from "../reducers/login"
-import { push } from "react-router-redux";
 
 function* login() {
     yield takeLatest(types.LOGIN_REQUEST, loginAuth);
@@ -10,7 +8,7 @@ function* login() {
 
 export default login
 
-function* loginAuth({ user, password,navigate }) {
+function* loginAuth({ user, password, navigate }) {
     yield new Promise(resolve => setTimeout(resolve, 2000));
     yield put({
         type: types.LOGIN_SUCCESS,
@@ -22,7 +20,6 @@ function* loginAuth({ user, password,navigate }) {
             fechaNacimiento: "1990-01-25",
         }
     })
-    // yield put(navigate)
 }
 
 

@@ -1,8 +1,7 @@
 import React, { useState } from "react"
-// import RevenueChart from "./revenue-chart"
 import 'bootstrap/dist/css/bootstrap.css'
 import Layout from "../../components/Layout";
-import { Button, Card, CardImg, CardImgOverlay, CardText, CardTitle, Col, Form, FormGroup, Input, Label, Offcanvas, OffcanvasBody, OffcanvasHeader, Row } from "reactstrap";
+import { Button, Card, Col, Form, FormGroup, Input, Label, Offcanvas, OffcanvasBody, OffcanvasHeader, Row } from "reactstrap";
 import './compra.css'
 import LastProduct from "../Productos/LastProduct";
 import Header from "../../components/Header";
@@ -11,7 +10,7 @@ import SelectProveedor from "./ProveedoresFilter";
 import useToggle from "../../hooks/useToogle";
 import NuevoProveedor from "./FormNuevoProveedor";
 
-const Compra = ({ }) => {
+const Compra = () => {
     const [productsSelect, setProductsSelect] = useState([])
     const [value, toggleValue] = useToggle(false)
     return (

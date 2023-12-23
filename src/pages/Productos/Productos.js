@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react"
-import { Button, Card, Table } from "reactstrap"
+import React, { useState } from "react"
+import { Card } from "reactstrap"
 import './products.css'
-import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
-import { actions as actionProducts, selectors as selectorProducts } from "../../store/reducers/products"
+import { selectors as selectorProducts } from "../../store/reducers/products"
 import Header from "../../components/Header";
 import Layout from "../../components/Layout";
 import LastProduct from "./LastProduct";
 import ModalProductos from "./ModalProductos";
-const Products = ({ getLastProducts, fetching }) => {
-    let navigate = useNavigate();
+const Products = () => {
     const [modal, setModal] = useState(false);
     const [data, setData] = useState(null);
     const showModal = (item, data) => {

@@ -1,9 +1,8 @@
 import React from "react"
-// import RevenueChart from "./revenue-chart"
-import { Field, Form, Formik } from "formik";
+import { Field } from "formik";
 import 'bootstrap/dist/css/bootstrap.css'
-const InputField = ({ id, className, placeholder, name, disabled, formikBag,type }) => {
-    const { values, errors } = formikBag;
+const InputField = ({ id, className, placeholder, name, disabled, formikBag, type }) => {
+    const { errors } = formikBag;
     return (
         <>
             <Field

@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 
-import { Button, Card, Label, Row, Table } from "reactstrap"
+import { Button, Label, Row, Table } from "reactstrap"
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
 import InputField from "../../components/InputField";
 import { connect } from "react-redux";
-import LayoutLoader from "../../components/LayoutLoader";
 import { actions as actionProducts, selectors as selectorProducts } from "../../store/reducers/products"
 
 const NuevoProveedor = () => {
@@ -32,26 +31,26 @@ const NuevoProveedor = () => {
                 onSubmit={(values) => handleSubmit(values)}>
                 {(formikBag) => (
                     <Form>
-                        <br/>
+                        <br />
                         <Row>
                             <Label>Representante Legal</Label>
-                            <InputField formikBag={formikBag} id="search" className="form-control form-control-lg"  name="search" />
+                            <InputField formikBag={formikBag} id="search" className="form-control form-control-lg" name="search" />
                         </Row>
                         <Row>
                             <Label>Nombre empresa</Label>
-                            <InputField formikBag={formikBag} id="search" className="form-control form-control-lg"  name="search" />
+                            <InputField formikBag={formikBag} id="search" className="form-control form-control-lg" name="search" />
                         </Row>
                         <Row>
                             <Label>Direccion</Label>
-                            <InputField formikBag={formikBag} id="search" className="form-control form-control-lg"  name="search" />
+                            <InputField formikBag={formikBag} id="search" className="form-control form-control-lg" name="search" />
                         </Row>
                         <Row>
                             <Label>Telefono</Label>
-                            <InputField formikBag={formikBag} id="search" className="form-control form-control-lg"  name="search" />
+                            <InputField formikBag={formikBag} id="search" className="form-control form-control-lg" name="search" />
                         </Row>
                         <Row>
                             <Label>Pais</Label>
-                            <InputField formikBag={formikBag} id="search" className="form-control form-control-lg"  name="search" />
+                            <InputField formikBag={formikBag} id="search" className="form-control form-control-lg" name="search" />
                         </Row>
                         <br />
                         <Row className="compras-nuevoProveedor__seccion_button">

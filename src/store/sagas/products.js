@@ -1,4 +1,4 @@
-import { takeEvery, takeLatest, take, call, fork, put } from "redux-saga/effects";
+import { takeLatest, call, put } from "redux-saga/effects";
 import * as servicios from "../../middlewares/products"
 import { types } from "../reducers/products"
 
@@ -10,12 +10,11 @@ function* productos() {
 export default productos
 
 function* getLastProduct() {
-    console.log("aquiiii");
     yield new Promise(resolve => setTimeout(resolve, 2000));
     const response = yield call(servicios.getLastProduct);
     let dataProducts = [];
     for (let i = 0; i < (response.length > 10 ? response.length : response.length); i++) {
-       dataProducts.push(response[i])
+        dataProducts.push(response[i])
     }
     yield put({
         type: types.PRODUCTS_SUCCESS,
@@ -27,7 +26,7 @@ function* getProveedores() {
     const response = yield call(servicios.getProveedores);
     let dataProveedores = [];
     for (let i = 0; i < (response.length > 10 ? response.length : response.length); i++) {
-       dataProveedores.push(response[i])
+        dataProveedores.push(response[i])
     }
     yield put({
         type: types.PROVEEDORES_SUCCESS,

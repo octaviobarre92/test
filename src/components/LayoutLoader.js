@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React from "react"
 import { bool, string } from 'prop-types'
 import LoadingOverlay from "react-loading-overlay";
 const LayoutLoader = ({ children, display, text = "Cargando informacion, por favor espere..." }) => {

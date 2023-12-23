@@ -1,22 +1,15 @@
-import React, { useEffect, useState } from "react"
-import { string, func, bool } from 'prop-types'
+import React, { useEffect } from "react"
 
-import { Button, Card, Table } from "reactstrap"
+import { Button, Table } from "reactstrap"
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
 import './products.css'
 import InputField from "../../components/InputField";
-import { push } from "react-router-redux";
-import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import LayoutLoader from "../../components/LayoutLoader";
 import { actions as actionProducts, selectors as selectorProducts } from "../../store/reducers/products"
-import Header from "../../components/Header";
-import Layout from "../../components/Layout";
 import DropdownField from "../../components/DropdownField";
 const LastProduct = ({ showCheck, showDelete, productsSelect = undefined, getLastProducts, fetching, showActions, dataProducts, showAdd, showModal = () => { } }) => {
-    let navigate = useNavigate();
-
     useEffect(() => {
         getLastProducts()
     }, [])
@@ -140,7 +133,6 @@ const mapStateToProps = (state) => ({
 })
 const mapDispatchToProps = (dispatch) => ({
     getLastProducts: () => {
-        console.log("acaaa");
         dispatch(actionProducts.getLastProduct());
     }
 });

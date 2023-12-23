@@ -9,32 +9,31 @@ const options = [
 ];
 
 const SelectProveedor = ({ getProveedores, dataProveedores }) => {
-    const [selectedOption, setSelectedOption] = useState(null);
     const [productsItems, setproductsItems] = useState([]);
     useEffect(() => {
         getProveedores()
     }, [])
     useEffect(() => {
         if (dataProveedores && dataProveedores.length) {
-            const newProduct=dataProveedores.map((item) => {
+            const newProduct = dataProveedores.map((item) => {
                 return {
                     value: item.idProveedor,
                     label: item.nombreProveedor,
-                    product:item
+                    product: item
                 }
             })
             setproductsItems(newProduct)
         }
     }, [dataProveedores])
-    const setProductsOnchange=(value)=>{
+    const setProductsOnchange = (value) => {
         // let productsSelectNow=[value.product,...productsSelect];
         // setProductsSelect(productsSelectNow)
     }
     return (
         <div className="App">
             <Select
-                defaultValue={selectedOption}
-                onChange={(e)=>{setProductsOnchange(e);}}
+                defaultValue={null}
+                onChange={(e) => { setProductsOnchange(e); }}
                 placeholder="Buscar proveedor o agregue uno nuevo"
                 options={productsItems}
             />

@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
 import InputField from '../../components/InputField';
 function ModalProductos({ data, modal, setModal, ...args }) {
-
     const toggle = () => setModal(!modal);
-    console.log(data);
     const initialValues = {
         nameProduct: data ? data.data.nombre : "",
         description: data ? data.data.descripcion : "",
